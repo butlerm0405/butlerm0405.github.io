@@ -5,25 +5,62 @@
   <title>Melissa Butler</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { 
-      max-width: 700px; 
-      margin: 40px auto; 
-      font-family: system-ui, sans-serif; 
-      line-height: 1.5; 
+    body {
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: system-ui, sans-serif;
+      line-height: 1.5;
       color: #222;
+      padding: 0 20px;
     }
-    h1 { font-size: 2em; margin-bottom: 0.2em; }
-    h2 { font-size: 1.5em; margin-top: 2em; margin-bottom: 0.5em; }
-    h3 { font-size: 1.2em; margin-bottom: 0.2em; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 0.5em; }
+
+    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.6em; margin-top: 2em; margin-bottom: 0.5em; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+    h3 { font-size: 1.2em; margin-bottom: 0.3em; }
+
     a { text-decoration: none; color: #0066cc; }
     a:hover { text-decoration: underline; }
-    .project { margin-bottom: 1em; }
-    .publication { margin-bottom: 0.7em; }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #fefefe;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .collapsible {
+      background-color: #f1f1f1;
+      color: #222;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1em;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #e0e0e0;
+    }
+
+    .content {
+      padding: 0 10px;
+      display: none;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    ul { list-style: none; padding-left: 0; }
+    li { margin-bottom: 0.5em; }
   </style>
 </head>
 <body>
+
   <h1>Melissa Butler</h1>
   <p>Applied Mathematics / Network Science</p>
 
@@ -33,34 +70,56 @@
   </ul>
 
   <h2>Projects & Code</h2>
-  <div class="project">
-    <h3>Complex Network Anomaly Detection</h3>
-    <p>Analyzed anomalous temporal and community structures in complex networks using spectral methods and statistical techniques. Case study on human mobility data.</p>
-    <ul>
-      <li><a href="https://github.com/yourusername/network-anomaly" target="_blank">Code Repository</a></li>
-    </ul>
+
+  <div class="card">
+    <button type="button" class="collapsible">Complex Network Anomaly Detection</button>
+    <div class="content">
+      <p>Analyzed anomalous temporal and community structures in complex networks using spectral methods and statistical techniques. Case study on human mobility data.</p>
+      <ul>
+        <li><a href="https://github.com/yourusername/network-anomaly" target="_blank">Code Repository</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="project">
-    <h3>Project Name 2</h3>
-    <p>Brief description of project 2 here.</p>
-    <ul>
-      <li><a href="https://github.com/yourusername/project2" target="_blank">Code Repository</a></li>
-    </ul>
+  <div class="card">
+    <button type="button" class="collapsible">Project Name 2</button>
+    <div class="content">
+      <p>Brief description of project 2 here.</p>
+      <ul>
+        <li><a href="https://github.com/yourusername/project2" target="_blank">Code Repository</a></li>
+      </ul>
+    </div>
   </div>
 
   <h2>Publications</h2>
-  <ul>
-    <li class="publication">
-      Butler, M., et al. "Title of Paper 1." <em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a>
-    </li>
-    <li class="publication">
-      Butler, M., et al. "Title of Paper 2." <em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a>
-    </li>
-  </ul>
+  <div class="card">
+    <button type="button" class="collapsible">Butler, M., et al. "Title of Paper 1."</button>
+    <div class="content">
+      <p><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <button type="button" class="collapsible">Butler, M., et al. "Title of Paper 2."</button>
+    <div class="content">
+      <p><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
+    </div>
+  </div>
 
   <h2>Contact</h2>
   <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
   <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+
+  <script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
 </body>
 </html>
