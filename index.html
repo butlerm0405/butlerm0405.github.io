@@ -14,11 +14,18 @@
       padding: 0 20px;
     }
 
-    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
-    h2 { font-size: 1.6em; margin-top: 2em; margin-bottom: 0.5em; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-    h3 { font-size: 1.2em; margin-bottom: 0.3em; }
+    h1 { font-size: 2.2em; margin-bottom: 0.2em; color: #990033; }
+    h2 { 
+      font-size: 1.6em; 
+      margin-top: 2em; 
+      margin-bottom: 0.5em; 
+      border-bottom: 2px solid #eee; 
+      padding-bottom: 5px; 
+      color: #990033;
+    }
+    h3 { font-size: 1.2em; margin-bottom: 0.3em; color: #990033; }
 
-    a { text-decoration: none; color: #0066cc; }
+    a { text-decoration: none; color: #990033; }
     a:hover { text-decoration: underline; }
 
     .card {
@@ -30,9 +37,11 @@
       box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
     }
 
+    .card:hover { box-shadow: 2px 4px 12px rgba(0,0,0,0.15); transform: translateY(-2px); transition: all 0.2s ease; }
+
     .collapsible {
       background-color: #f1f1f1;
-      color: #222;
+      color: #990033;
       cursor: pointer;
       padding: 10px;
       width: 100%;
@@ -58,68 +67,4 @@
     ul { list-style: none; padding-left: 0; }
     li { margin-bottom: 0.5em; }
   </style>
-</head>
-<body>
-
-  <h1>Melissa Butler</h1>
-  <p>Applied Mathematics / Network Science</p>
-
-  <h2>CV</h2>
-  <ul>
-    <li><a href="cv.pdf" target="_blank">Download CV (PDF)</a></li>
-  </ul>
-
-  <h2>Projects & Code</h2>
-
-  <div class="card">
-    <button type="button" class="collapsible">Complex Network Anomaly Detection</button>
-    <div class="content">
-      <p>Analyzed anomalous temporal and community structures in complex networks using spectral methods and statistical techniques. Case study on human mobility data.</p>
-      <ul>
-        <li><a href="https://github.com/yourusername/network-anomaly" target="_blank">Code Repository</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="card">
-    <button type="button" class="collapsible">Project Name 2</button>
-    <div class="content">
-      <p>Brief description of project 2 here.</p>
-      <ul>
-        <li><a href="https://github.com/yourusername/project2" target="_blank">Code Repository</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <h2>Publications</h2>
-  <div class="card">
-    <button type="button" class="collapsible">Butler, M., et al. "Title of Paper 1."</button>
-    <div class="content">
-      <p><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
-    </div>
-  </div>
-
-  <div class="card">
-    <button type="button" class="collapsible">Butler, M., et al. "Title of Paper 2."</button>
-    <div class="content">
-      <p><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
-    </div>
-  </div>
-
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-  <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-
-  <script>
-    const collapsibles = document.querySelectorAll(".collapsible");
-    collapsibles.forEach(btn => {
-      btn.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-      });
-    });
-  </script>
-
-</body>
-</html>
+<
