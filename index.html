@@ -28,17 +28,13 @@
     a { text-decoration: none; color: #0066cc; }
     a:hover { text-decoration: underline; }
 
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 15px;
-      margin-bottom: 15px;
-      background-color: #fefefe;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
-    }
-
     ul { list-style: none; padding-left: 0; }
     li { margin-bottom: 0.5em; }
+
+    p.project-description, p.publication-description {
+      margin-top: 0;
+      margin-bottom: 0.8em;
+    }
   </style>
 </head>
 <body>
@@ -53,33 +49,25 @@
 
   <h2>Projects & Code</h2>
 
-  <div class="card">
-    <h3>Complex Network Anomaly Detection</h3>
-    <p>Analyzed anomalous temporal and community structures in complex networks using spectral methods and statistical techniques. Case study on human mobility data.</p>
-    <ul>
-      <li><a href="https://github.com/yourusername/network-anomaly" target="_blank">Code Repository</a></li>
-    </ul>
-  </div>
+  <h3>Complex Network Anomaly Detection</h3>
+  <p class="project-description">Analyzed anomalous temporal and community structures in complex networks using spectral methods and statistical techniques. Case study on human mobility data.</p>
+  <ul>
+    <li><a href="https://github.com/yourusername/network-anomaly" target="_blank">Code Repository</a></li>
+  </ul>
 
-  <div class="card">
-    <h3>Project Name 2</h3>
-    <p>Brief description of project 2 here.</p>
-    <ul>
-      <li><a href="https://github.com/yourusername/project2" target="_blank">Code Repository</a></li>
-    </ul>
-  </div>
+  <h3>Project Name 2</h3>
+  <p class="project-description">Brief description of project 2 here.</p>
+  <ul>
+    <li><a href="https://github.com/yourusername/project2" target="_blank">Code Repository</a></li>
+  </ul>
 
   <h2>Publications</h2>
 
-  <div class="card">
-    <h3>Butler, M., et al. "Title of Paper 1."</h3>
-    <p><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
-  </div>
+  <h3>Butler, M., et al. "Title of Paper 1."</h3>
+  <p class="publication-description"><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
 
-  <div class="card">
-    <h3>Butler, M., et al. "Title of Paper 2."</h3>
-    <p><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
-  </div>
+  <h3>Butler, M., et al. "Title of Paper 2."</h3>
+  <p class="publication-description"><em>Journal Name</em>, Year. <a href="https://doi.org/..." target="_blank">DOI</a></p>
 
   <h2>Contact</h2>
   <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
